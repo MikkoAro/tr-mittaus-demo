@@ -16,13 +16,13 @@ public class ButtonPositiveObservationTest {
 	public void pressButtonMultipleTimes_IncrementPosObsCountByOne_ShouldIncrementPosObsCountToReportData() throws Exception {
 		ButtonPositiveObservation button = new ButtonPositiveObservation(2);
 		button.pressButton();
-		assertEquals(1, ReportData.getInstance().obsNote.get(2).posObs.intValue());
+		assertEquals(1, ReportData.getInstance().getObsNote(2).getPosObs());
 	}
 
 	@Test
 	public void pressButtonMultipleTimes_IncrementPosObsCountByGivenValue_ShouldIncrementPosObsToReportDataByGivenValueAndId() throws Exception {
 		ButtonPositiveObservation button = new ButtonPositiveObservation(4);
 		button.pressButtonMultipleTimes(14);
-		assertEquals(14, ReportData.getInstance().obsNote.get(4).posObs.intValue());
+		assertEquals(14, ReportData.getInstance().getObsNote(4).getPosObs());
 	}
 }

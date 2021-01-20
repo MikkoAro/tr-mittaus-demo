@@ -2,6 +2,7 @@ package com.tyoturvallisuus;
 public class Main {
 
 	public static void main(String[] args) {
+		
 		ButtonInitializer buttons = null;
 		ReportData report = ReportData.getInstance();
 
@@ -36,7 +37,6 @@ public class Main {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 		report.printReport();
 	}
 }

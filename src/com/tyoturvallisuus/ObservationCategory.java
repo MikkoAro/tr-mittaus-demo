@@ -5,7 +5,8 @@ import java.util.EnumMap;
 import Util.ObservationCategoryReader;
 
 public class ObservationCategory {
-    enum Observation
+	
+    private enum Observation
     {
         OBSERVATION_CATEGORY0,
         OBSERVATION_CATEGORY1,
@@ -16,7 +17,7 @@ public class ObservationCategory {
         OBSERVATION_CATEGORY6
     }
     
-    static EnumMap<Observation, String> map = new EnumMap<>(Observation.class);
+    private static EnumMap<Observation, String> map = new EnumMap<>(Observation.class);
 
     ObservationCategory(){
     	ObservationCategory.map = populateObservationTypes();
@@ -34,5 +35,9 @@ public class ObservationCategory {
     
     public static String getObservationType(int obsCode){
         return map.get(Observation.values()[obsCode]);
+    }
+    
+    public static int getObservationCount() {
+    	return ObservationCategory.Observation.values().length;
     }
 }

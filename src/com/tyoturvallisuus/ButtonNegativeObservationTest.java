@@ -23,13 +23,13 @@ public class ButtonNegativeObservationTest {
 		ButtonNegativeObservation button = new ButtonNegativeObservation(6);
 		button.pressButton("A43 lightning defective");
 		button.pressButton("Excessive stuff on passageway");
-		assertEquals("Excessive stuff on passageway", ReportData.getInstance().obsNote.get(6).comments.get(1));
+		assertEquals("Excessive stuff on passageway", ReportData.getInstance().getObsNote(6).getComment(1));
 	}
 	
 	@Test
 	public void pressButtonString_IncrementNegObsCountByOne_ShouldIncrementNegObsCountToReportData() throws Exception {
 		ButtonNegativeObservation button = new ButtonNegativeObservation(1);
 		button.pressButton("A43 lightning defective");
-		assertEquals(1, ReportData.getInstance().obsNote.get(1).negObs.intValue());
+		assertEquals(1, ReportData.getInstance().getObsNote(1).getNegObs());
 	}
 }

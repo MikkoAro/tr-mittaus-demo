@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 public class ObservationCategoryReader {
-	Properties props = new Properties();
-	String pathToResource = "src/Resources/ObservationCategory.properties";
+	private Properties props = new Properties();
+	private String pathToResource = "src/Resources/ObservationCategory.properties";
 	
 	public ArrayList<String> getObservationCodes() {
 		FileInputStream fis = null;

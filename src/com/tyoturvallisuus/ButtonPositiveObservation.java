@@ -1,8 +1,13 @@
 package com.tyoturvallisuus;
-public class ButtonPositiveObservation extends AbstractButton{
+public class ButtonPositiveObservation implements Button{
 	
+	int buttonId;
+
 	ButtonPositiveObservation(int buttonId) throws Exception {
-		super(buttonId);
+		if(0 <= buttonId & buttonId < observationCount) {
+			this.buttonId = buttonId;
+		} else {
+			throw new Exception("ButtonId must be in range of Observations count");}
 	}
 	
 	public void pressButton(){

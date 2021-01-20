@@ -1,8 +1,9 @@
 package com.tyoturvallisuus;
 
 public class ButtonInitializer {
-	AbstractButton posButton0, posButton1, posButton2, posButton3, posButton4, posButton5, posButton6;
-	AbstractButton negButton0, negButton1, negButton2, negButton3, negButton4, negButton5, negButton6;
+	
+	Button posButton0, posButton1, posButton2, posButton3, posButton4, posButton5, posButton6;
+	Button negButton0, negButton1, negButton2, negButton3, negButton4, negButton5, negButton6;
 	
 	ButtonInitializer() throws Exception{
 		this.posButton0 = new ButtonPositiveObservation(0);

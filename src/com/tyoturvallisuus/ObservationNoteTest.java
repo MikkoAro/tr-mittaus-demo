@@ -10,7 +10,7 @@ public class ObservationNoteTest {
 	public void addObservationNoteComment_AddCommentById_ShouldAddObservationCommentById() {
 		ObservationNote on = new ObservationNote(0);
 		on.addObservationNoteComment("Test comment");
-		assertEquals("Test comment", on.comments.get(0));
+		assertEquals("Test comment", on.getComment(0));
 	}
 
 	@Test

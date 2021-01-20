@@ -1,9 +1,14 @@
 package com.tyoturvallisuus;
 
-public class ButtonNegativeObservation extends AbstractButton{
+public class ButtonNegativeObservation implements Button{
 	
+	int buttonId;
+
 	ButtonNegativeObservation(int buttonId) throws Exception {
-		super(buttonId);
+		if(0 <= buttonId & buttonId < observationCount) {
+			this.buttonId = buttonId;
+		} else {
+			throw new Exception("ButtonId must be in range of Observations count");}
 	}
 
 	public void pressButton(String comment) throws Exception {
@@ -21,5 +26,4 @@ public class ButtonNegativeObservation extends AbstractButton{
 
 	@Override
 	public void pressButtonMultipleTimes(int timesPressed) {}
-
 }
